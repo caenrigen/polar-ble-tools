@@ -2,7 +2,9 @@
 
 Use the high-level exports from `polar_ble_tools` for common operations. APIs
 that require a device are asynchronous and own the connection for one call;
-pass a `transport_factory` in tests or custom integrations.
+pass a `transport_factory` in tests or custom integrations. Windows integrations
+use uncached WinRT GATT service lookup by default; a custom `BleakTransport`
+can override this or pass additional Windows backend options.
 
 | Import | Kind | Purpose |
 | --- | --- | --- |
